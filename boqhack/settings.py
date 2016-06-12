@@ -38,8 +38,6 @@ INSTALLED_APPS = [
 
     'dashboard',
     'api',
-    'chatroom',
-    'channels',
     'rest_framework',
 ]
 
@@ -120,18 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# In settings.py
-CHANNEL_LAYERS = {
-    "default": {
-        # "BACKEND": "asgiref.inmemory.ChannelLayer",
-        "BACKEND": "asgi_redis.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("localhost", 6379)],
-        },
-        "ROUTING": "boqhack.routing.routing",
-    },
-}
 
 # Rest framework backend
 REST_FRAMEWORK = {
